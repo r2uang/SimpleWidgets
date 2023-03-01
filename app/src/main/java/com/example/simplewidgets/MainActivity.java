@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void nextActivity() {
         Intent intent = new Intent(MainActivity.this, Home.class);
-        intent.putExtra("key_username", (CharSequence) username);
-//        startActivity(intent, MY_REQUEST_CODE);
+        String strUsername = username.getText().toString().trim() ;
+        intent.putExtra("key_username", strUsername);
+        startActivity(intent);
     }
 }
